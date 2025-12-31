@@ -4,6 +4,7 @@ import 'package:practise_three/features/home/home_screen.dart';
 import 'package:practise_three/features/presentation/models/on_boarding_items.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
