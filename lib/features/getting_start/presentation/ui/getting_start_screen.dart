@@ -18,7 +18,7 @@ class GettingStartScreen extends StatelessWidget {
               bottom: 30,
               child: CustomElevatedButton(
                   onPressed: (){
-                    Navigator.pushReplacementNamed(context, Routes.homeScreen);
+                    Navigator.pushReplacementNamed(context, Routes.bottomVavBarScreen);
                   },
                   title: Text("Go To Shopping",style: AppStyles.font20,)
               ),
