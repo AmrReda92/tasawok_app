@@ -6,4 +6,9 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
+  static TextStyle font18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Color(0xffFB741A),
+  );
 }
