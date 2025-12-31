@@ -6,7 +6,6 @@ import 'package:practise_three/features/home/presentation/widgets/grid_view_cate
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
                   SizedBox(height: 20,),
@@ -32,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                       Text("Show All",style: AppStyles.font18 ,),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 12,),
                   GridViewCategory(),
                 ],
               ),

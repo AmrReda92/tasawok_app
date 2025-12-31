@@ -4,6 +4,8 @@ import 'package:practise_three/features/bottom_nav_bar/presentation/ui/bottom_na
 import 'package:practise_three/features/getting_start/presentation/ui/getting_start_screen.dart';
 import 'package:practise_three/features/home/presentation/ui/home_screen.dart';
 import 'package:practise_three/features/onboarding/presentation/ui/on_boarding_screen.dart';
+import 'package:practise_three/features/product/presentation/ui/product_details_screen.dart';
+import 'package:practise_three/features/product/presentation/ui/product_screen.dart';
 
 class AppRoutes {
  static  Route<dynamic>? function(RouteSettings setting) {
@@ -19,6 +21,13 @@ class AppRoutes {
 
       case Routes.bottomVavBarScreen :
         return MaterialPageRoute(builder: (_)=>BottomNavBarScreen());
+
+      case Routes.productScreen :
+        return MaterialPageRoute(builder: (_)=>ProductScreen());
+
+      case Routes.productDetailsScreen :
+        return MaterialPageRoute(builder: (_)=>ProductDetailsScreen());
+
     }
 
 
