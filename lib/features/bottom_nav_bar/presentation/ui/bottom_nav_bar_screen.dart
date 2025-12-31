@@ -24,7 +24,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
         child: BottomNavigationBar(
           elevation: 8,
           selectedItemColor: ColorScheme.of(context).primary,
-          unselectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.grey.shade600,
           currentIndex: currentScreen,
           onTap: (index){
             setState(() {
