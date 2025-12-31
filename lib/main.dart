@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:practise_three/travel_app.dart';
+import 'package:practise_three/tasawok_app.dart';
 
 void main() {
-  runApp(const TravelApp());
+  runApp(const TasawokApp());
 }
 
 
