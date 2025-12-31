@@ -12,24 +12,32 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppbar(),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              SizedBox(height: 20,),
-              CustomCarouselSlider(),
-              SizedBox(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          children: [
+            Column(
+              children: [
+                SizedBox(height: 20,),
+                CustomCarouselSlider(),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: Column(
                 children: [
-                  Text("Categories",style: AppStyles.font18 ,),
-                  Text("Show All",style: AppStyles.font18 ,),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Categories",style: AppStyles.font18 ,),
+                      Text("Show All",style: AppStyles.font18 ,),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  GridViewCategory(),
                 ],
               ),
-              SizedBox(height: 20,),
-              GridViewCategory(),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

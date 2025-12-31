@@ -9,12 +9,14 @@ class CustomCarouselSlider extends StatelessWidget {
     return  CarouselSlider(
         items: [
           for(var item in carousel)
-            Image.asset(item,fit: BoxFit.cover,width: double.infinity,)
+            ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(item,fit: BoxFit.cover,width: double.infinity,))
         ],
         options: CarouselOptions(
           height: 220,
           aspectRatio: .8,
-          viewportFraction: 0.8,
+          viewportFraction: .8,
           initialPage: 0,
           enableInfiniteScroll: true,
           reverse: false,
@@ -23,7 +25,7 @@ class CustomCarouselSlider extends StatelessWidget {
           autoPlayAnimationDuration: Duration(milliseconds: 800),
           autoPlayCurve: Curves.fastOutSlowIn,
           enlargeCenterPage: true,
-          enlargeFactor: 0.3,
+          enlargeFactor: 0.2,
           scrollDirection: Axis.horizontal,
         )
     );
