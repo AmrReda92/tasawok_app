@@ -10,7 +10,6 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-
       backgroundColor: ColorScheme.of(context).primary,
       flexibleSpace: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14,),
@@ -19,12 +18,13 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Row(
                 children: [
+                  SizedBox(width: 40,),
                   Text (title,style: AppStyles.font20,),
                   Spacer(),
                   Icon(Icons.shopping_cart,size: 30,),
                 ],
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 14),
               CustomTextField()
             ],
           ),
