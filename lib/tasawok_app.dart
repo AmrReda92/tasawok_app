@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practise_three/core/routes/app_routes.dart';
 import 'package:practise_three/core/routes/routes.dart';
 
+
 class TasawokApp extends StatelessWidget {
   const TasawokApp({super.key});
 
@@ -14,8 +15,7 @@ class TasawokApp extends StatelessWidget {
         fontFamily: "Urbanist",
         colorScheme: ColorScheme.light(primary: const Color(0xffFB741A),),
       ),
-      initialRoute: Routes.gettingStartedScreen
-
+      initialRoute: Routes.onboardingScreen
     );
   }
 }

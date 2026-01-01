@@ -11,6 +11,6 @@ final class GetCategoriesFailure extends GetCategoriesState {
   GetCategoriesFailure(this.errorMessage);
 }
 final class GetCategoriesSuccess extends GetCategoriesState {
-  final List<String> product ;
-  GetCategoriesSuccess(this.product);
+  final List<String> categories ;
+  GetCategoriesSuccess(this.categories);
 }
