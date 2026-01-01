@@ -14,7 +14,7 @@ class TasawokApp extends StatelessWidget {
         fontFamily: "Urbanist",
         colorScheme: ColorScheme.light(primary: const Color(0xffFB741A),),
       ),
-      initialRoute: Routes.productScreen
+      initialRoute: Routes.productDetailsScreen
 
     );
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practise_three/core/routes/routes.dart';
 import 'package:practise_three/core/widgets/custom_elevated_button.dart';
-import 'package:practise_three/features/getting_start/presentation/ui/getting_start_screen.dart';
-import 'package:practise_three/features/home/presentation/ui/home_screen.dart';
 import 'package:practise_three/features/onboarding/presentation/models/on_boarding_items.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

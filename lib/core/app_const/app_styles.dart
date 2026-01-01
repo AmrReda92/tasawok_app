@@ -11,4 +11,9 @@ class AppStyles {
     fontWeight: FontWeight.bold,
     color: Color(0xffFB741A),
   );
+  static TextStyle font16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.grey
+  );
 }
