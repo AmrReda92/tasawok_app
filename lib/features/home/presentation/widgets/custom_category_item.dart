@@ -21,7 +21,7 @@ class CustomCategoryItem extends StatelessWidget {
         elevation: 9,
         child: Stack(
           children: [
-            Image.asset(AppImages.test,fit: BoxFit.cover,height: double.infinity,width: double.infinity,),
+            Image.asset(getImages(categoryName),fit: BoxFit.cover,height: double.infinity,width: double.infinity,),
             Positioned(
                 bottom: 0,
                 left: 0,
@@ -37,6 +37,21 @@ class CustomCategoryItem extends StatelessWidget {
       ),
     );
   }
+}
+
+String getImages(String category){
+  switch(category) {
+    case "beauty" :
+      return AppImages.beauty;
+
+    case "fragrances":
+      return AppImages.fragrances;
+    case "furniture" :
+      return AppImages.furniture;
+    case "groceries" :
+      return AppImages.groceries;
+  }
+  return "";
 }
 
 
