@@ -6,6 +6,7 @@ import 'package:practise_three/features/home/data/repos/home_repo.dart';
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
   HomeRepoImpl(this.apiService);
+
   @override
   Future<Either<Failure, List<String>>> getCategoryName()async {
    try{
