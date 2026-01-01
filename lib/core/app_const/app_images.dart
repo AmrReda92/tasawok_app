@@ -1,5 +1,6 @@
 class AppImages{
   static const String coverPhoto = "assets/images/cover_start.png";
+  static const String test = "assets/images/carousel1.jpg";
 }
 
 

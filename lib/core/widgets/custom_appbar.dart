@@ -4,7 +4,8 @@ import 'package:practise_three/features/home/presentation/widgets/custom_text_fi
 import '../app_const/app_styles.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppbar({super.key});
+  final String title ;
+  const CustomAppbar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Row(
                 children: [
-                  Text ("Welcome",style: AppStyles.font20,),
+                  Text (title,style: AppStyles.font20,),
                   Spacer(),
                   Icon(Icons.shopping_cart,size: 30,),
                 ],
