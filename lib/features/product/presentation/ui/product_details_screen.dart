@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practise_three/core/app_const/app_styles.dart';
 import 'package:practise_three/core/app_const/product_model.dart';
+import 'package:practise_three/core/widgets/appbar_main.dart';
 import 'package:practise_three/core/widgets/custom_elevated_button.dart';
 import 'package:practise_three/features/product/presentation/widgets/product_carousel_detail.dart';
 
@@ -13,11 +14,7 @@ class ProductDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: ColorScheme.of(context).primary,
-        title: Text("Product detail",style: AppStyles.font20,maxLines: 1,overflow: TextOverflow.ellipsis,),
-        centerTitle: true,
-      ),
+      appBar: AppbarMain(title: "Product detail",),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

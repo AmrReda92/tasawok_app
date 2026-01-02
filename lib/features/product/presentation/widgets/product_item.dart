@@ -25,9 +25,18 @@ class ProductItem extends StatelessWidget {
             children: [
               Expanded(
                 flex: 3,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(8),topRight: Radius.circular(8)),
-                      child: CachedNetworkImage(imageUrl:productModel.images![0],fit: BoxFit.contain,width: double.infinity))),
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(8),topRight: Radius.circular(8)),
+                          child: CachedNetworkImage(imageUrl:productModel.images![0],fit: BoxFit.contain,width: double.infinity)),
+                      Positioned(
+                          right: 8,
+                          top: 8,
+                          child: Icon(Icons.favorite_border))
+                    ],
+                  ),
+              ),
               Expanded(
                 flex: 2,
                 child: Padding(
@@ -39,15 +48,15 @@ class ProductItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(child: Text(productModel.title??"item",maxLines: 1,overflow: TextOverflow.ellipsis,style: AppStyles.font20.copyWith(color: Colors.black),)),
-                          Icon(Icons.heart_broken_rounded)
+
                         ],
                       ),
                       Spacer(),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("\$ ${productModel.price}",style: AppStyles.font18,),
-                          Text("% ${productModel.discountPercentage}",style: AppStyles.font18,),
+                          Text("${productModel.price} \$",style: AppStyles.font18,),
+                          SizedBox(width: 8,),
+                          Text("(${productModel.discountPercentage}%)",style: AppStyles.font16,),
                         ],
                       ),
                       Spacer(),

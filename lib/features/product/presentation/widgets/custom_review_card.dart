@@ -23,8 +23,6 @@ class CustomReviewCard extends StatelessWidget {
           Text((review.date??"").split('T').first,style: AppStyles.font16,),
           SizedBox(height: 14,),
           Text(review.comment??"null",style: AppStyles.font18,),
-
-
         ],
 
       ),

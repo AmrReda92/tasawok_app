@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart' ;
+import 'package:practise_three/features/cart/presentation/ui/cart_screen.dart';
 import 'package:practise_three/features/favourite/presentation/ui/favourite_screen.dart';
 import 'package:practise_three/features/home/presentation/ui/home_screen.dart';
+import 'package:practise_three/features/profile/presentation/ui/profile_screen.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -13,6 +15,8 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screens =[
     HomeScreen(),
     FavouriteScreen(),
+    CartScreen(),
+    ProfileScreen(),
   ];
   int currentScreen=0;
 
