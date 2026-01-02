@@ -13,7 +13,7 @@ class ProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context, Routes.productDetailsScreen);
+        Navigator.pushNamed(context, Routes.productDetailsScreen,arguments: productModel);
       },
       child: Container(
         decoration: BoxDecoration(

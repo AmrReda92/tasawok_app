@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practise_three/core/app_const/product_model.dart';
 import 'package:practise_three/core/routes/routes.dart';
 import 'package:practise_three/core/utils/api_service.dart';
 import 'package:practise_three/features/bottom_nav_bar/presentation/ui/bottom_nav_bar_screen.dart';
@@ -36,6 +37,7 @@ class AppRoutes {
             ));
 
       case Routes.productScreen :
+        //setting.arguments الحاجات ال انا بعتهاله في navigator
     final String categoryName = setting.arguments as String;
         return MaterialPageRoute(builder: (_) =>
             BlocProvider(
@@ -44,7 +46,8 @@ class AppRoutes {
             ));
 
       case Routes.productDetailsScreen :
-        return MaterialPageRoute(builder: (_) => ProductDetailsScreen());
+        final product = setting.arguments as ProductModel ;
+        return MaterialPageRoute(builder: (_) => ProductDetailsScreen(productModel: product,));
     }
 
 

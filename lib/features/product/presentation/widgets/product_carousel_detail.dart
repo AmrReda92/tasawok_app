@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -5,7 +6,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../../core/app_const/app_images.dart';
 
 class ProductCarouselDetail extends StatefulWidget {
-  const ProductCarouselDetail({super.key});
+  final List<String> images ;
+  const ProductCarouselDetail({super.key, required this.images});
 
   @override
   State<ProductCarouselDetail> createState() => _ProductCarouselDetailState();
@@ -14,11 +16,7 @@ class ProductCarouselDetail extends StatefulWidget {
 class _ProductCarouselDetailState extends State<ProductCarouselDetail> {
   int currentIndex=0;
 
-  List<String> images =[
-    AppImages.test,
-    AppImages.test,
-    AppImages.test,
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,8 +25,8 @@ class _ProductCarouselDetailState extends State<ProductCarouselDetail> {
           aspectRatio: 16/9,
           child: CarouselSlider(
             items: [
-              for(var item in images)
-                Image.asset(item,fit: BoxFit.cover,width: double.infinity,)
+              for(var item in widget.images)
+                CachedNetworkImage(imageUrl: item,fit: BoxFit.contain,width: double.infinity,)
             ],
             options:CarouselOptions(
               onPageChanged: (index,reason){
@@ -49,7 +47,7 @@ class _ProductCarouselDetailState extends State<ProductCarouselDetail> {
         SizedBox(height: 16,),
         AnimatedSmoothIndicator(
           activeIndex: currentIndex,
-          count: images.length ,
+          count: widget.images.length ,
           effect: WormEffect(
             activeDotColor: ColorScheme.of(context).primary,
             dotHeight: 10,
