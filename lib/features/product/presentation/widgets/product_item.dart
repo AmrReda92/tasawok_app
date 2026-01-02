@@ -1,11 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:practise_three/core/app_const/app_images.dart';
 import 'package:practise_three/core/app_const/app_styles.dart';
+import 'package:practise_three/core/app_const/product_model.dart';
 import 'package:practise_three/core/routes/routes.dart';
 import 'package:practise_three/core/widgets/custom_elevated_button.dart';
 
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key});
+  final ProductModel productModel ;
+  const ProductItem({super.key, required this.productModel});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class ProductItem extends StatelessWidget {
                 flex: 3,
                   child: ClipRRect(
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(8),topRight: Radius.circular(8)),
-                      child: Image.asset(AppImages.test,fit: BoxFit.cover,width: double.infinity))),
+                      child: CachedNetworkImage(imageUrl:productModel.images![0],fit: BoxFit.contain,width: double.infinity))),
               Expanded(
                 flex: 2,
                 child: Padding(
@@ -36,7 +38,7 @@ class ProductItem extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("rwerrtr",maxLines: 1,overflow: TextOverflow.ellipsis,style: AppStyles.font20.copyWith(color: Colors.black),),
+                          Expanded(child: Text(productModel.title??"item",maxLines: 1,overflow: TextOverflow.ellipsis,style: AppStyles.font20.copyWith(color: Colors.black),)),
                           Icon(Icons.heart_broken_rounded)
                         ],
                       ),
@@ -44,8 +46,8 @@ class ProductItem extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("\$ 201",style: AppStyles.font18,),
-                          Text("% 10",style: AppStyles.font18,),
+                          Text("\$ ${productModel.price}",style: AppStyles.font18,),
+                          Text("% ${productModel.discountPercentage}",style: AppStyles.font18,),
                         ],
                       ),
                       Spacer(),

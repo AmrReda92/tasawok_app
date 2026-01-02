@@ -3,8 +3,8 @@ class ProductModel {
   String? title;
   String? description;
   String? category;
-  double? price;
-  double? discountPercentage;
+  num? price;
+  num? discountPercentage;
   double? rating;
   int? stock;
   List<String>? tags;
