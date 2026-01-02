@@ -58,7 +58,7 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                CustomReview(),
+                CustomReview(reviews: productModel.reviews??[]),
               ],
             )
           ],
