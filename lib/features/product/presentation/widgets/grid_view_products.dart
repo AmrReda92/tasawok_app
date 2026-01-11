@@ -25,7 +25,7 @@ class GridViewProducts extends StatelessWidget {
                           ),
                           itemBuilder: (context, index) {
                             final ProductModel product = state.allProducts[index];
-                            return ProductItem(productModel: product);
+                            return ProductItem(productModel: product,);
                           }
                       );
           }
