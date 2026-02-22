@@ -14,10 +14,14 @@ import 'package:practise_three/features/product/data/repos/product_repo_impl.dar
 import 'package:practise_three/features/product/presentation/manager/get_products_cubit/get_products_cubit.dart';
 import 'package:practise_three/features/product/presentation/ui/product_details_screen.dart';
 import 'package:practise_three/features/product/presentation/ui/product_screen.dart';
+import 'package:practise_three/features/splash/presentation/ui/splash_screen.dart';
 
 class AppRoutes {
   static Route<dynamic>? function(RouteSettings setting) {
     switch (setting.name) {
+      case Routes.splashScreen :
+        return MaterialPageRoute(builder: (_)=>const SplashScreen());
+
       case Routes.onboardingScreen :
         return MaterialPageRoute(builder: (_) => OnBoardingScreen());
 
